@@ -1,0 +1,504 @@
+	body
+	{
+		zoom:100%;
+		font-size: 12pt;
+		padding:0px;
+		margin:0px;
+		overflow: hidden;
+	}
+	.hidden
+	{
+	  visibility:hidden;
+	  opacity:0;
+	  transition:opacity 0.5s;
+	}
+
+	.mbdiv
+	{
+		display: inline-block;
+	}
+
+	.hasPopup
+	{
+	  cursor:pointer;
+	}
+
+
+	.noPopup
+	{
+	  cursor:none;
+	}
+
+	#calculate
+	{
+			display: block;
+	}
+
+	.matrixeditor
+	{
+		display: inline-block;
+	}
+
+	.matrixblock
+	{
+		display: inline-block;
+		position: relative;
+	}
+
+	.titlebar
+	{
+		background-color: var(--theme_bgcol_ramp_13);
+		margin:0px;
+		position:relative;
+		width:100%;
+		left:0;
+		top:0;
+		padding:0.5rem;
+		border-bottom: solid 2px var(--theme_bgcol_ramp_11);
+		color: var(--theme_bgcol_ramp_7);
+	}
+
+	.maincontainer p 
+	{
+		font-size:4pt;
+	}
+
+	.matrixTextArea
+	{
+width: 15rem;
+height: 15rem;
+margin: 1rem;
+display: block;
+vertical-align: top;
+line-height: 1.5rem;
+overflow: hidden;
+} 
+
+	.caption
+	{
+		font-size:1rem;
+		font-style: italic;
+		margin: 0rem 0 0 1rem;
+		display: block;
+	}
+
+
+	#scrollable_inner
+	{
+		max-width: 50rem;
+		min-width: 10rem;			
+		min-height: 1rem;				
+		max-height: 50rem;
+		overflow-y: auto;
+		
+/* margin: 0.5rem 0.0 23.5rem 0.0rem; */
+		
+/* padding: 0.5rem 0 3.5rem 0; */
+	}
+
+	#popup_inner
+	{
+		/* overflow-y: auto; */
+	}
+
+	#popupoverlay
+	{
+	  width:100vw;
+	  height: 100vh;
+	  z-index: 10000;
+	  position: absolute;
+	  top:0;
+	  left:0;
+	  display:block;
+	  pointer-events:none;
+	}
+
+	.popup
+	{
+		pointer-events:all;
+		/* margin:0px; */
+		/* max-width: 50rem; */
+		/* min-width: 10rem; */
+		/* min-height: 1rem; */
+		/* max-height: 50rem; */
+	}
+
+	.main-title
+	{
+		background-image:"img/titlebg.png";
+		background-color:var(--panel-colour);
+		padding:2rem;
+	}
+	
+
+	.popup_bg
+	{
+		background-color: var(--popup-bg-colour);
+		border-radius:0.5rem;
+		width: fit-content;
+		padding: 0.5rem;
+		height: fit-content;
+		box-shadow: 3px 3px 20px 1px #000000b8;
+		border: 2px solid #defaff;
+		position: absolute;
+		opacity: 1;
+		filter: blur(0px) contrast(120%) brightness(99%);
+		/* margin: 130px; */
+	}
+
+	.vis-tooltip
+	{
+		font-family:sans-serif;
+	}
+/*calc(1rem +*/ 
+	
+    .popup_bg:after
+    {
+        content:"▼";
+        color:var(--panel-border-colour);
+        font-size:2rem;
+        bottom:calc(-1.0em - 1px);
+        left: var(--popup-local-mouse-x);
+        position:absolute;
+        text-shadow: 2px 2px 7px var(--shadow-colour);
+        z-index:2;
+        /* margin-left: 100%; */
+        /* margin-right: 100%; */
+    }
+
+	.nav-tabs>li>a 
+	{
+	  margin-right: 2px;
+	  line-height: 1.42857143;
+	  border: 1px solid #988f8f8f;
+	  border-radius: 4px 4px 0 0;
+	}
+
+	#mynetwork {
+	  margin:0;
+	  width: 75vw;
+	  height: 100%;
+	  border: 1px solid lightgray;
+	}
+
+	.scrollable_data_list 
+	{
+
+	}
+
+	.inpage_graphwidget
+	{
+		width:100%;
+		height:60vh;
+		position: relative;
+		margin-top:1rem;
+		margin-bottom:2rem;
+	}
+
+	.inpage_graphwidget_small
+	{
+		width:120rem;
+		height:70rem;
+		position: relative;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+		left:calc(50% - 60rem);
+	}
+
+	.inpage_graphcontainer
+	{
+		width: calc(100% - 50rem);
+		height: 100%;
+		/* background:blue; */
+		display:inline-block;
+		border:1px solid var(--theme_bgcol_ramp_17);
+		position: absolute;
+		margin: 0px;
+		padding: 0px;
+		
+	}
+
+	.inpage_graphcontainer_controls
+	{
+		width:45rem;
+		height:100%;
+		display:inline-block;
+		position: absolute;
+		right: 0px;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.graphcontainer
+	{
+		width:74vw;
+		height: 80vh;
+		/* background:blue; */
+		display:inline-block;
+	}
+	.nodecontainer
+	{
+		width: 24vw;
+		height: 80vh;
+		background: var(--panel-colour);
+		display:inline-block;
+		position: absolute;
+		overflow-y:auto;
+		float: right;
+		right:0px;
+	}
+
+	.graphcanvas
+	{
+		width:100%;
+		height:100%;
+	}
+
+	.goldenflow
+	{
+		width:100%;
+		height:100%;
+	}
+
+	.golden_flow_canvas
+	{
+		width:100%;
+		height:100%;
+	}
+
+	.scrollable_data_list div
+	{
+
+	}
+
+	.scrollable_data_list thead td
+	{
+		background-color:#777777;
+		font-size:1.5em;
+		color:white;
+		padding:0.2em;
+		cursor:pointer;
+	}
+
+	.scrollable_data_list input
+	{
+		width:calc(100% - 4rem);
+		border-radius:0.6rem;
+		border:2px solid var(--popup-bg-colour);
+		height:3rem;
+		background-color:var(--panel-colour);
+		color:var(--shadow-colour);
+	}
+
+	.scrollable_data_list tr
+	{
+	  margin:0.2em;
+	}
+	.scrollable_data_list td
+	{
+	  padding:0.2em;
+	  margin:0.1em;
+	}
+  
+	.scrollable_data_list td:nth-child(1)
+	{
+	  width: fit-content;
+	}
+	.scrollable_data_list td:nth-child(2)
+	{
+	  width: fit-content;
+	}
+	 .scrollable_data_list td:nth-child(3)
+	{
+	  width: fit-content;
+	}
+
+	.scrollable_data_list tr:nth-child(even)
+	{
+	  background-color: #dcdcdc;
+	}
+	.scrollable_data_list tr:nth-child(odd)
+	{
+	  background-color: #aaaaaa;
+	}
+
+  	.hidden
+  	{
+  		/* visibility: hidden; */
+  		opacity: 0;
+  	}
+
+
+  	.flowGroup
+  	{
+  		
+		border-left: 1px solid #0000003d;
+  	}
+	.dataItem
+	{
+		background-color: #80808038;
+	}
+
+	.dataItem:nth-child(even)
+	{
+		background-color: #80808000;
+	}
+	
+	.flowDescription
+	{
+		padding:0.2rem;
+		font-size:1.2rem;
+		margin-bottom: 2rem;
+	}
+
+	.flowGroupRange
+	{
+		font-style:italic;
+		font-size:1.0rem;
+		margin-left: 0.5rem;
+	}
+
+	.flowGroupCondition
+	{
+		font-style:italic;
+		font-size:1.0rem;
+		margin-left: 0.5rem;
+	}
+
+	.flowGroupCondition
+	{
+		font-size:
+	}
+
+	.flowGroupTitle
+	{
+		font-weight: 600;
+		background-color: #93ada8;
+		width:100%;
+		display: inline-block;
+		pointer-events: none;
+	}
+	.flowGroupTitle:before
+	{
+		content:"▶";
+		margin-right:0.3rem;
+		color:#4c484882;
+		vertical-align:midddle;
+		pointer-events:all;
+		cursor: pointer;
+	}
+	.dataItemCode
+	{
+		
+cursor: pointer;
+	}
+	.dataItemName
+	{
+		
+margin-left: 0.5rem;
+		
+font-size: 0.9rem;
+		
+vertical-align: middle;
+		
+text-align: center;
+		
+font-style: italic;
+		
+cursor: pointer;
+	}
+
+
+	.flowHeader
+	{
+
+	}
+
+	.network
+	{
+		width:100%;
+		height:100%;
+	}
+
+	.flowTitle
+	{		
+		font-size: 2.0rem;		
+		text-decoration: underline;		
+		text-decoration-color: #0000003b;		
+		text-decoration-style: dashed;
+	}
+
+	.flowDescription
+	{
+		
+	}
+
+	.flowDataView
+	{		
+		border: 1px solid var(--shadow-colour);		
+		padding: 0.4rem;	
+		background: var(--panel-colour);
+	}
+
+	.heightZero
+	{
+		height:0px;
+		overflow:hidden;
+	}
+
+	.linebreak
+	{
+		width:100%;
+		height:2px;
+		color:grey;
+	}
+
+	.dataItemFieldName
+	{
+		font-weight:bold;
+	}	
+	
+	.dataItemFieldValue
+	{
+		font-style:italic;
+		font-size:1.0rem;
+	}
+
+
+	.goldenflowchoose
+	{
+		background: #d6d6d6;
+		border-radius:0.5rem;
+		width:20rem;
+		border: 4px solid #2cc0ef;
+		height:20rem;
+		box-shadow: 2px 3px 9px 0px #00000078;
+		text-align: center;
+		vertical-align: middle;
+		line-height: 19rem;
+		margin: 1rem;
+		display: inline-grid;
+	}
+
+
+	.goldenflowchoose:hover
+	{
+		background: #d6d6d6;
+		border-radius:0.5rem;
+		border: 4px solid #2ceaef;
+		display: inline-grid;
+		transform:scale(1.03);
+		transition:all 0.2s;
+		cursor:pointer;
+
+	}
+
+	.topcontainer
+	{
+		overflow-y:auto;
+		height: calc(100% - 13rem);
+		position: absolute;
+		width: 100%;
+	}
+
+	
